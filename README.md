@@ -24,7 +24,7 @@ The dashboard lets you watch this happen with three real isotopes found in used 
 ## What I learned
 
 - Radioactive decay is random for each atom but predictable for large groups.
-- The tutorial uses the shortcut `p = λ` for the chance of decay each step. It's close but not exact: the simulated half-life comes out to about 9.7 steps instead of 10.
+- The tutorial uses the shortcut `p = λ` for the chance of decay each step. It's close but not exact: the simulated half-life comes out to about 9.6 steps instead of 10.
 - Short half-life means intense but brief; long half-life means long-lasting but weak.
 
 ## About
