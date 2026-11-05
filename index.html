@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Decay Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231d5ad8%22/%3E%3Cpath%20d%3D%22M12%2015%20L12%2051%20L54%2051%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M14%2016%20C21%2033%2030%2043%2052%2046.5%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2216%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2233.5%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2241.5%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2245.5%22%20r%3D%224.5%22%20fill%3D%22%23f09a4f%22/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +27,13 @@
   --atom:#5b9dff; --decayed:#283244; --flash:#f09a4f; --exact:#f09a4f; --mean:#e6ebf2; --soft:#1b2433; color-scheme:dark}
 
 *{box-sizing:border-box}
-   [hidden]{display:none!important}
 [hidden]{display:none!important}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
 .wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
 a{color:var(--atom)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:clamp(44px,6vw,58px);height:auto;flex:none;border-radius:13px}
 header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
 h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(2rem,4.5vw,3.1rem);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
 .sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
@@ -101,7 +103,7 @@ footer{color:var(--muted);font-size:13px}
 <div class="wrap">
   <header>
     <div>
-      <h1>Decay Dashboard</h1>
+      <div class="brand"><img class="logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231d5ad8%22/%3E%3Cpath%20d%3D%22M12%2015%20L12%2051%20L54%2051%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M14%2016%20C21%2033%2030%2043%2052%2046.5%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2216%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2233.5%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2241.5%22%20r%3D%224.5%22%20fill%3D%22%23fff%22/%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2245.5%22%20r%3D%224.5%22%20fill%3D%22%23f09a4f%22/%3E%3C/svg%3E" alt="Decay Dashboard logo"><h1>Decay Dashboard</h1></div>
       <p class="sub">Is nuclear waste dangerous forever? Watch 1,000 radioactive atoms decay one random event at a time, and compare them to the half-life formula.</p>
     </div>
     <span class="badge"><i></i>Simulated data · based on the @kgabhi Python tutorial</span>
