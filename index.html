@@ -261,7 +261,7 @@ footer{color:var(--muted);font-size:13px}
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
   const fmt = n => Math.round(n).toLocaleString("en-US");
 
-  const qOf = () => 1 - Math.log(2) / S.tHalf;          // tutorial: p = lam, q = 1 - p
+  const qOf = () => Math.exp(-Math.log(2) / S.tHalf);   // exact: p = 1 - e^(-λ), q = e^(-λ)
 
   // Isotope buttons
   const isoBox = $("isotopes");
@@ -475,7 +475,7 @@ footer{color:var(--muted);font-size:13px}
     $("prog").style.width = (S.step / STEPS * 100) + "%";
     $("next").disabled = S.step >= STEPS;
     const eff = Math.log(0.5) / Math.log(qOf());
-    $("modelNote").textContent = `Model note: the tutorial uses the shortcut p = λ for each step's decay chance, so this simulation's real half-life is about ${eff.toFixed(1)} steps instead of ${S.tHalf}. That's why the dots drift slightly below the dashed line over time.`;
+    $("modelNote").textContent = `Model note: the original tutorial used the shortcut p = λ, which made the half-life about 9.7 steps instead of ${S.tHalf}. This version uses the exact decay chance, p = 1 − e^(−λ), so the dots land on the dashed line.`;
     drawDots(); drawChart(); drawRandomness();
   }
 
